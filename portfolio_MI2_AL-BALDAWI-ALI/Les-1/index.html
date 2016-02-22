@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="nl">
+<!-- Al-Baldawi Ali
+     r0580463-->
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, height=device-height" />
+    <title>Home</title>
+    <link rel="stylesheet" href="stijlblad.css">
+    <script type="text/javascript">
+        function Reken(operator) {
+            // Variabelen maken en waarden aflezen
+            var g1 = parseFloat(document.reken.getal1.value);
+            var g2 = parseFloat(document.reken.getal2.value);
+
+            // Indien het ingevuld waarde niet Numeriek is dan wordt er een 0 getal geplaatst.
+            if (isNaN(getal1)) {
+                getal1 = 0;
+            }
+            if (isNaN(getal2)) {
+                getal2 = 0;
+            }
+            
+            // Operatoren selectie:
+            if (operator == "+") {
+                result = g1 + g2;
+            }
+
+            if (operator == "-") {
+                result = g1 - g2;
+            }
+
+            if (operator == "x") {
+                result = g1 * g2;
+            }
+
+            if (operator == "/") {
+                result = g1 / g2;
+            }
+            // Uitkomst op scherm afdrukken:
+            document.reken.frmResult.value = result;
+            document.reken.getal1.focus();
+        }
+
+        function Leegmaken() {
+            document.reken.reset();
+            document.reken.getal1.focus();
+        }
+    </script>
+
+</head>
+
+<body>
+    <h1>Basis rekenmachine</h1>
+    <form name="reken" method="post">
+        <label for="getal1">Getal 1:</label>
+        <input type="text" id="getal1" size="10" name="getal1">
+        <br>
+        <label for="getal2">Getal 2:</label>
+      
+        <input type="text" id="getal2" size="10" name="getal2">
+        <br>
+        <input type=button value="+" id="operator-1" onclick="Reken('+')">
+        <input type=button value="-" id="operator-2" onclick="Reken('-')">
+        <input type=button value="x" id="operator-3" onclick="Reken('x')">
+        <input type=button value="/" id="operator-4" onclick="Reken('/')">
+        <br>
+        <label for="frmResult">Uitkomst:</label>
+        <br>
+        <input type="text" id="frmResult" size="20" name="frmResult" disabled>
+        <br>
+        <input type=button value="Opnieuw" id="leegmaken" onclick="Leegmaken()">
+    </form>
+
+</body>
+
+</html>

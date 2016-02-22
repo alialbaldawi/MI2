@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="beschrijving van de webpagina">
+    <meta name="keywords" content="trefwoorden, gescheiden, door, komma's">
+    <meta name="viewport" content="width=device-width, height=device-height" />
+    <title>Basis-operatoren</title>
+    
+    <style type="text/css">
+        body {
+            margin: 0 20%;
+            font-size: 200%;
+        }
+        
+    </style>
+    <script type="text/javascript">
+        // Begin van de script
+        var cijfer1, cijfer2, result;
+
+        function optellen(cijfer1, cijfer2) {
+            result = cijfer1 + cijfer2;
+            return result;
+        }
+
+        function aftrekken(cijfer1, cijfer2) {
+            result = cijfer1 - cijfer2;
+            return result;
+        }
+
+        function vermenigvuldigen(cijfer1, cijfer2) {
+            result = cijfer1 * cijfer2;
+            return result;
+        }
+
+        function delen(cijfer1, cijfer2) {
+            result = cijfer1 / cijfer2;
+            return result;
+        }
+
+
+        document.write("<h1> Basis operatoren</h1>");
+
+        cijfer1=2;
+        cijfer2=3;
+        document.write("Optellen van " + cijfer1 + " + " + cijfer2 + " = " + optellen(cijfer1, cijfer2) + "<br/>");
+        
+        cijfer1=9;
+        cijfer2=3;
+        document.write("Aftrekken van " + cijfer1 + " - " + cijfer2 + " = " + aftrekken(cijfer1, cijfer2) + "<br/>");
+        
+        cijfer1=5;
+        cijfer2=3;
+        document.write("Vermenigvuldigen van " + cijfer1 + " * " + cijfer2 + " = " + vermenigvuldigen(cijfer1, cijfer2) + "<br/>");
+        
+        cijfer1=12;
+        cijfer2=3;
+        document.write("Delen van " + cijfer1 + " / " + cijfer2 + " = " + delen(cijfer1, cijfer2) + "<br/>");
+        // Einde van de script
+    </script>
+
+</head>
+
+<body>
+
+
+</body>
+
+</html>
